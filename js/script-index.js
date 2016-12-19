@@ -50,3 +50,8 @@ $(document).ready(function(){
 	$('#ocultar').hide('js-menu');
 })
 
+$(document).ready(function printNews(){
+	$('#printnews').text('NUEVAS RECETAS');
+});
+printNews();
+
