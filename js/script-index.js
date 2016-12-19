@@ -42,4 +42,11 @@ function renderActivity(recipe) {
 	
 }
 
+$(document).ready(function(){
+	$('#ocultar').hide('js-back');
+})
+
+$(document).ready(function(){
+	$('#ocultar').hide('js-menu');
+})
 
