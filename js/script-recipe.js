@@ -1,5 +1,4 @@
-$(document).ready(function(){
-	$('#ocultar').hide('js-menu');
+$(document).ready(funcion(){
+	console.log('Documento html listo');
 })
-
 	

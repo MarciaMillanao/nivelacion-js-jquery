@@ -12,7 +12,7 @@ $(document).ready( function(){
 * marcado el atributo "highlighted" como TRUE
 */
 function renderHighlightedRecipes(recipesArray) {
-	/*$.each(recipesArray, function(value, index){  no me funciono
+	/*$.each(recipesArray, function(value, index){  no me funciono	
 		for(var i =0; i < recipesArray.length; i++){
 			if(recipesArray[i].highlighted === true);
 			}
@@ -20,8 +20,8 @@ function renderHighlightedRecipes(recipesArray) {
 		});*/
 		for(var i =0; i < recipesArray.length; i++){
 			if(recipesArray[i].highlighted === true);
-			var highlighted = recipesArray[i];
-			renderRecipe(highlighted);
+			var fotoRecetas = recipesArray[i];
+			renderRecipe(fotoRecetas);
 		}
 		console.log('Recipes: ', recipesArray[i]);
 	}
@@ -33,6 +33,7 @@ function renderHighlightedRecipes(recipesArray) {
 * archivo "templates/templates-recipe.html"
 */
 function renderRecipe(recipe) {
+	$('.list-recipes').append('<span class="title-recipe"><a class="item-recipe" href="#"><span class="attribution"><span class="title-recipe">'+recipe.title+'</span><span class="metadata-recipe"><span class="author-recipe"> '+recipe.source.name+' </span><span class="bookmarks-recipe"><span class="icon-bookmark"></span></span></span></span><img src="img/recipes/640x800/'+recipe.name+'.jpg"/></a></span>');
 	console.log('Voy a pintar la receta: ', recipe);
 }
 
@@ -56,11 +57,15 @@ function renderActivity(recipe) {
 
 $(document).ready(function(){
 	$('#ocultar').hide('js-back');
-})
+});
+
+$(document).ready(function(){
+	$('#ocultar').hide('js-menu');
+});
 
 
 $(document).ready(function printNews(){
 	$('#printnews').text('NUEVAS RECETAS');
 });
-printNews();
+
 
